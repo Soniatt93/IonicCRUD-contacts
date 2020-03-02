@@ -16,6 +16,7 @@ export class HomePage implements OnInit {
 
   public newBookingForm = new FormGroup({
     name: new FormControl('', Validators.required),
+    img: new FormControl('', Validators.required),
     speciality: new FormControl('', Validators.required),
     date: new FormControl('', Validators.required),
     id: new FormControl('')
@@ -29,6 +30,7 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.newBookingForm.setValue({
       id: '',
+      img: '',
       name: '',
       speciality: '',
       date: ''

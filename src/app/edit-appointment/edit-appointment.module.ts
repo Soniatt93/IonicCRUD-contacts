@@ -8,13 +8,17 @@ import { EditAppointmentPageRoutingModule } from './edit-appointment-routing.mod
 
 import { EditAppointmentPage } from './edit-appointment.page';
 
+import {MatButtonModule} from '@angular/material/button';
+
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     EditAppointmentPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule
   ],
   declarations: [EditAppointmentPage]
 })

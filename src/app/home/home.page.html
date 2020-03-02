@@ -13,6 +13,10 @@
     </ion-list-header>
 
     <ion-item *ngFor="let booking of Bookings" class="user-list">
+      <ion-avatar slot="start">
+        <ion-img [src]="booking.data.img"></ion-img>
+      </ion-avatar>
+
       <ion-label>
         <h5>
           <ion-icon name="person"></ion-icon> {{booking.data.name}}
@@ -36,6 +40,6 @@
 
 <ion-footer class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Footer - No Border</ion-title>
+    <ion-button expand="full" fill="clear" href="https://github.com/Soniatt93/ionic-firestore-crud" target="_blank">Github</ion-button>
   </ion-toolbar>
 </ion-footer>

@@ -12,6 +12,7 @@ import { AppointmentService } from './../shared/appointment.service';
 export class EditAppointmentPage implements OnInit {
   updateBookingForm = new FormGroup({
     name: new FormControl('', Validators.required),
+    img: new FormControl('', Validators.required),
     speciality: new FormControl('', Validators.required),
     date: new FormControl('', Validators.compose([Validators.required, Validators.pattern('^(((0[1-9]|[12][0-9]|30)[-]?(0[13-9]|1[012])|31[-]?(0[13578]|1[02])|(0[1-9]|1[0-9]|2[0-8])[-/]?02)[-/]?[0-9]{4}|29[-/]?02[-/]?([0-9]{2}(([2468][048]|[02468][48])|[13579][26])|([13579][26]|[02468][048]|0[0-9]|1[0-6])00))$')])),
     id: new FormControl('')
@@ -29,6 +30,7 @@ export class EditAppointmentPage implements OnInit {
     const editSubscribe = this.aptService.getBooking(id).subscribe((booking) => {
       this.updateBookingForm.setValue({
         id: id,
+        img: booking.payload.data()['img'],
         name: booking.payload.data()['name'],
         speciality: booking.payload.data()['speciality'],
         date: booking.payload.data()['date']
@@ -44,6 +46,7 @@ export class EditAppointmentPage implements OnInit {
     } else {
       this.router.navigate(['/home']);
       const data = {
+        img: form.img,
         name: form.name,
         speciality: form.speciality,
         date: form.date

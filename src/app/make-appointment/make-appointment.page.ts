@@ -15,6 +15,7 @@ export class MakeAppointmentPage implements OnInit {
   Bookings = [];
   newBookingForm = new FormGroup({
     name: new FormControl('', Validators.required),
+    img: new FormControl('', Validators.required),
     speciality: new FormControl('', Validators.required),
     date: new FormControl('',Validators.compose([Validators.required, Validators.pattern('^(((0[1-9]|[12][0-9]|30)[-]?(0[13-9]|1[012])|31[-]?(0[13578]|1[02])|(0[1-9]|1[0-9]|2[0-8])[-/]?02)[-/]?[0-9]{4}|29[-/]?02[-/]?([0-9]{2}(([2468][048]|[02468][48])|[13579][26])|([13579][26]|[02468][048]|0[0-9]|1[0-6])00))$')])),
     id: new FormControl('')
@@ -28,6 +29,7 @@ export class MakeAppointmentPage implements OnInit {
   ngOnInit() {
     this.newBookingForm.setValue({
       id: '',
+      img: '',
       name: '',
       speciality: '',
       date: ''
@@ -48,6 +50,7 @@ export class MakeAppointmentPage implements OnInit {
       return false;
     } else {
       const data = {
+        img: form.img,
         name: form.name,
         speciality: form.speciality,
         date: form.date
@@ -56,6 +59,7 @@ export class MakeAppointmentPage implements OnInit {
         console.log('Reserva creada exitósamente!')
         this.newBookingForm.setValue({
           id: '',
+          img: '',
           name: '',
           speciality: '',
           date: ''
