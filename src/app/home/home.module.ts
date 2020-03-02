@@ -6,6 +6,10 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +20,9 @@ import { HomePage } from './home.page';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
+    MatButtonModule,
+    MatIconModule
   ],
   declarations: [HomePage]
 })

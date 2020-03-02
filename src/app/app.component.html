@@ -1,3 +1,17 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button routerLinkActive="tab-selected" routerLink="/home" class="ios" tab="home" aria-label="Icon home">
+      <ion-icon name="list"></ion-icon>
+      <ion-label>Citas</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button routerLinkActive="tab-selected" routerLink="/make-appointment" class="ios" tab="make-appointment" aria-label="Icon add">
+      <ion-icon name="add-circle"></ion-icon>
+      <ion-label>Pedir cita</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
