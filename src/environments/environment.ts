@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyDVO5uDeMGV3B5Nsd4pM9OC8pU0VaDArEw",
-    authDomain: "sonia-ionic-crud.firebaseapp.com",
-    databaseURL: "https://sonia-ionic-crud.firebaseio.com",
-    projectId: "sonia-ionic-crud",
-    storageBucket: "sonia-ionic-crud.appspot.com",
-    messagingSenderId: "963948581122",
-    appId: "1:963948581122:web:940a3e2789104828e5721b",
-    measurementId: "G-XL504G5CPM"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
   }
 };
 
