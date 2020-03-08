@@ -10,8 +10,8 @@
   <ion-list lines="full">
     <form [formGroup]="updateBookingForm" (ngSubmit)="editBooking(updateBookingForm.value)">
       <ion-item>
-        <ion-label position="floating">Especialidad</ion-label>
-        <ion-input formControlName="speciality" type="text" placeholder="cardiologia, digestivo.." required></ion-input>
+        <ion-label position="floating">Paciente</ion-label>
+        <ion-input formControlName="name" type="text" placeholder="Nombre del paciente" required></ion-input>
       </ion-item>
       
       <ion-item>
@@ -20,8 +20,13 @@
       </ion-item>
       
       <ion-item>
-        <ion-label position="floating">Profesional</ion-label>
-        <ion-input formControlName="name" type="text" placeholder="Dr/a. nombre" required></ion-input>
+        <ion-label position="floating">Doctor/a</ion-label>
+        <ion-input formControlName="doctor" type="text" placeholder="Nombre del doctor" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Especialidad</ion-label>
+        <ion-input formControlName="speciality" type="text" placeholder="cardiologia, digestivo.." required></ion-input>
       </ion-item>
 
       <ion-item>

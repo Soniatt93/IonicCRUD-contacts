@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'edit-appointment/:id',
     loadChildren: () => import('./edit-appointment/edit-appointment.module').then( m => m.EditAppointmentPageModule)
   },
+  {
+    path: 'cam',
+    loadChildren: () => import('./cam/cam.module').then( m => m.CamPageModule)
+  },
 ];
 
 @NgModule({

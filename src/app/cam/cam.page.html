@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar class="ios hydrated">
+    <ion-title class="ios title-ios hydrated">Fotos doctores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title text-center>Camara</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button (click)="captureImage()">Hacer foto</ion-button>
+      <br><br>
+      <img [src]="clickedImage" />
+    </ion-card-content>
+  </ion-card>
+</ion-content>

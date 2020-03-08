@@ -8,20 +8,25 @@
   <ion-list lines="full">
     <form [formGroup]="newBookingForm" (ngSubmit)="newBooking(newBookingForm.value)">
       <ion-item>
-        <ion-label position="floating">Especialidad</ion-label>
-        <ion-input formControlName="speciality" type="text" placeholder="cardiologia, digestivo.." required></ion-input>
+        <ion-label position="floating">Paciente</ion-label>
+        <ion-input formControlName="name" type="text" placeholder="Nombre del paciente" required></ion-input>
       </ion-item>
-
+      
       <ion-item>
         <ion-label position="floating">Imagen</ion-label>
         <ion-input formControlName="img" type="text" placeholder="url" required></ion-input>
       </ion-item>
       
       <ion-item>
-        <ion-label position="floating">Profesional</ion-label>
-        <ion-input formControlName="name" type="text" placeholder="Dr/a. nombre" required></ion-input>
+        <ion-label position="floating">Doctor/a</ion-label>
+        <ion-input formControlName="doctor" type="text" placeholder="Nombre del doctor" required></ion-input>
       </ion-item>
 
+      <ion-item>
+        <ion-label position="floating">Especialidad</ion-label>
+        <ion-input formControlName="speciality" type="text" placeholder="cardiologia, digestivo.." required></ion-input>
+      </ion-item>
+      
       <ion-item>
         <ion-label position="floating">Fecha</ion-label>
         <ion-input formControlName="date" type="text" placeholder="dd-MM-yyyy" required></ion-input>
