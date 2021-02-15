@@ -5,12 +5,12 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
-    path: 'make-appointment',
-    loadChildren: () => import('./make-appointment/make-appointment.module').then( m => m.MakeAppointmentPageModule)
+    path: 'add-contact',
+    loadChildren: () => import('./add-contact/add-contact.module').then( m => m.AddContactPageModule)
   },
   {
-    path: 'edit-appointment/:id',
-    loadChildren: () => import('./edit-appointment/edit-appointment.module').then( m => m.EditAppointmentPageModule)
+    path: 'edit-contact/:id',
+    loadChildren: () => import('./edit-contact/edit-contact.module').then( m => m.EditContactPageModule)
   },
   {
     path: 'cam',

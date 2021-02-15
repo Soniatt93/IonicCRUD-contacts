@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      DocApp
+      ContactApp
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,28 +9,28 @@
 <ion-content>
   <ion-list class="ios list-ios hydrated">
     <ion-list-header class="ios hydrated">
-      Citas
+      Lista Contactos
     </ion-list-header>
 
-    <ion-item *ngFor="let booking of Bookings" class="user-list">
+    <ion-item *ngFor="let c of Contacts" class="user-list">
       <ion-avatar slot="start">
-        <ion-img [src]="booking.data.img"></ion-img>
+        <ion-img [src]="c.data.img"></ion-img>
       </ion-avatar>
 
       <ion-label>
         <h5>
-          <ion-icon name="person"></ion-icon> {{booking.data.name}}
+          <ion-icon name="person"></ion-icon> {{c.data.name}}
         </h5>
         <p>
-          <ion-icon name="calendar"></ion-icon> {{booking.data.date}}
+          <ion-icon name="calendar"></ion-icon> {{c.data.date}}
         </p>
       </ion-label>
 
       <div class="item-note" item-end>
-        <button mat-mini-fab color="primary" aria-label="Icon-button with a edit icon" (click)="editBooking(booking.id)">
+        <button mat-mini-fab color="primary" aria-label="Icon-button with a edit icon" (click)="editContact(c.id)">
           <mat-icon>edit</mat-icon>
         </button>        
-        <button mat-mini-fab color="warn" aria-label="Icon-button with a trash icon" (click)="deleteBooking(booking.id)" style="margin-left:5px">
+        <button mat-mini-fab color="warn" aria-label="Icon-button with a trash icon" (click)="deleteContact(c.id)" style="margin-left:5px">
           <mat-icon>delete</mat-icon>
         </button>
       </div>

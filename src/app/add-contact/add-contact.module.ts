@@ -4,22 +4,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EditAppointmentPageRoutingModule } from './edit-appointment-routing.module';
+import { AddContactPageRoutingModule } from './add-contact-routing.module';
 
-import { EditAppointmentPage } from './edit-appointment.page';
+import { AddContactPage } from './add-contact.page';
 
 import {MatButtonModule} from '@angular/material/button';
-
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EditAppointmentPageRoutingModule,
+    AddContactPageRoutingModule,
     ReactiveFormsModule,
     MatButtonModule
   ],
-  declarations: [EditAppointmentPage]
+  declarations: [AddContactPage]
 })
-export class EditAppointmentPageModule {}
+export class AddContactPageModule {}

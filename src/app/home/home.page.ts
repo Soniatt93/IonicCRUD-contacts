@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Appointment } from '../shared/Appointment';
-import { AppointmentService } from './../shared/appointment.service';
+import { Contact } from '../shared/Contact';
+import { ContactService } from '../shared/contact.service';
 
 @Component({
   selector: 'app-home',
@@ -11,34 +11,34 @@ import { AppointmentService } from './../shared/appointment.service';
 })
 
 export class HomePage implements OnInit {
-  docId = null; 
-  Bookings = [];
+  contactId = null; 
+  Contacts = [];
 
-  public newBookingForm = new FormGroup({
+  public newContactForm = new FormGroup({
     name: new FormControl('', Validators.required),
     img: new FormControl('', Validators.required),
-    speciality: new FormControl('', Validators.required),
+    mail: new FormControl('', Validators.required),
     date: new FormControl('', Validators.required),
     id: new FormControl('')
   });
 
   constructor(
-    private aptService: AppointmentService,
+    private aptService: ContactService,
     private router: Router
   ) { }
 
   ngOnInit() {
-    this.newBookingForm.setValue({
+    this.newContactForm.setValue({
       id: '',
       img: '',
       name: '',
-      speciality: '',
+      mail: '',
       date: ''
     });
-    this.aptService.getBookingList().subscribe((bookingsSnapshot) => {
-      this.Bookings = [];
-      bookingsSnapshot.forEach((bData: any) => {
-        this.Bookings.push({
+    this.aptService.getContactList().subscribe((contactsSnapshot) => {
+      this.Contacts = [];
+      contactsSnapshot.forEach((bData: any) => {
+        this.Contacts.push({
           id: bData.payload.doc.id,
           data: bData.payload.doc.data()
         });
@@ -47,20 +47,20 @@ export class HomePage implements OnInit {
   }
 
 
-  editBooking(docId) {
-    this.router.navigate(['/edit-appointment/', docId]);
-    console.log(docId);
+  editContact(contactId) {
+    this.router.navigate(['/edit-contact/', contactId]);
+    console.log(contactId);
   }
 
-  deleteBooking(docId) {
-    this.aptService.deleteBooking(docId).then(() => {
-      console.log('Cita eliminada!');
+  deleteContact(contactId) {
+    this.aptService.deleteContact(contactId).then(() => {
+      console.log('Conacto eliminado!');
     }, (error) => {
       console.error(error);
     });
     /*console.log(id)
     if (window.confirm('Do you really want to delete?')) {
-      this.aptService.deleteBooking(id)
+      this.aptService.deleteContact(id)
     }*/
   }
 }
