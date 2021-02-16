@@ -1,6 +1,6 @@
-# Ionic Firestore CRUD - ContactApp
+# Ionic Firestore CRUD
 This project was generated with Ionic CLI version 5.4.16 y Angular CLI version 8.3.25.
-<br>[Ver proyecto](https://stt-contactsapp.web.app)
+<br>[ContactApp](https://stt-contactsapp.web.app)
 
 ## Development server
 Run `ionic serve -l` for a dev serve. Navigate to `http://localhost:8200/`. The app will automatically reload if you change any of the source files..
