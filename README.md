@@ -1,5 +1,5 @@
 # Ionic Firestore CRUD
-A simple Ionic CRUD (Create, Read, Update and Delete) using ionic 3 application that helps to manage data from Cloud Firestore
+A simple Ionic CRUD (Create, Read, Update and Delete) using ionic 5 application that helps to manage data from Cloud Firestore
 This project was generated with Ionic CLI version 5.4.16 y Angular CLI version 8.3.25.
 
 ## Demo
