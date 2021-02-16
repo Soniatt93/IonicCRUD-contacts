@@ -1,4 +1,4 @@
-# Ionic Firebase CRUD - ContactApp
+# Ionic Firestore CRUD - ContactApp
 This project was generated with Ionic CLI version 5.4.16 y Angular CLI version 8.3.25.
 <br>[Ver proyecto](https://stt-contactsapp.web.app)
 
