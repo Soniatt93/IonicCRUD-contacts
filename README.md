@@ -21,8 +21,7 @@ To start the app, you may also try these the following commands in Node.js comma
 ```
 
 ## Update the environment
-You need to change file environment.ts and update the project details for the [Firebase](https://firebase.google.com/?hl=es) data.
-
+You need to change file environment.ts insert your [Firebase](https://firebase.google.com/?hl=es) project keys
 ```sh
 firebaseConfig = {
   apiKey: "<your key>",
@@ -37,9 +36,3 @@ Next, you need to configure Cloud Firestore and add a 'contact' collection.
 
 ## Build
 Run `ng build` to build the project. The build artifacts will be stored in the `www` directory.
-
-## Upload project to firebase
-```sh
-# firebase init
-# firebase deploy
-``` 
